@@ -1,0 +1,7 @@
+<h3>Categories</h3>
+<ul class="nav flex-column">
+  <mat-chip-list [aria-orientation]="'horizontal'" aria-label="Fish selection">
+    <mat-chip style="width:150px;" *ngFor="let category of listOfCategories" color="accent" [selected]="category.categoryName==categorySelectedItem"
+              (click)="handlerChipClick(category)" >{{category.categoryName}} ({{category.total}})</mat-chip>
+  </mat-chip-list>
+</ul>

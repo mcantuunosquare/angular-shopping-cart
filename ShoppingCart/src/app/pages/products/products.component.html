@@ -1,0 +1,19 @@
+
+  <div class="display-4 m-3 p-2">
+    Our Products
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-xl-1">
+        <div class="m-2">
+          <app-categories-navigator [listOfCategories]="listCategories" (categorySelected)="selectCategory($event)" [categorySelectedItem]="categorySelectedItem"></app-categories-navigator>
+        </div>
+      </div>
+      <div class="col-lg-10">
+        <div class="card-group p-3">
+          <app-product-grid-view *ngFor="let product of listProducts" [product]="product" (categorySelected)="selectCategory($event)"></app-product-grid-view>
+        </div>
+      </div>
+    </div>
+
+  </div>
