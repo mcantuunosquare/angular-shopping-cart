@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey:"98f1fcd0",
+  host: "https://my.api.mockaroo.com/",
+  titleApp:"Shopping Cart Web app"
 };
 
 /*

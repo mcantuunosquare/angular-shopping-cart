@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -19,13 +20,7 @@ describe('AppComponent', () => {
   it(`should have as title 'ShoppingCart'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ShoppingCart');
+    expect(app.title).toEqual(environment.titleApp);
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ShoppingCart app is running!');
-  });
 });
